@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto a vender</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="titulo">
+            <h1>INGRESO DE PRODUCTO</h1>
+        </div>
+        <div class="invitado">
+            <button type="button" class="btn btn-primary">
+                <a href="../index.html">Cerrar sesion</a>
+            </button>
+        </div>
+        <div class="container mt-5">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4 position-relative">
+                    <label for="validationTooltip01" class="form-label"><h5>NOMBRE PRODUCTO:</h5></label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <label for="validationTooltip02" class="form-label"><h5>CODIGO PRO:</h5></label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                </div>
+                <div class="col-md-4 position-relative">
+                    <label for="validationTooltip03" class="form-label"><h5>DESCRIPCION:</h5></label>
+                    <input type="text" class="form-control" id="validationTooltip03" value="" required>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <label for="validationTooltip04" class="form-label"><h5>PRECIO:</h5></label>
+                    <input type="text" class="form-control" id="validationTooltip04" value="" required>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <label for="validationTooltip05" class="form-label"><h5>CATEGORIA:</h5></label>
+                    <select class="form-select" id="validationTooltip05" required>
+                        <option selected disabled value="">ELEGIR...</option>
+                        <option>COMIDA</option>
+                        <option>LIMPIESA</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <a href="javascript:void(0);" id="btn-registrarse" class="btn btn-primary">INGRESAR</a>
+                </div>
+                <div class="col-12">
+                    <a href="./ventas.html" id="btn-iniciar-sesion" class="btn btn-primary">VOLVER A TIENDA</a>
+                </div>                
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var btnRegistrarse = document.getElementById("btn-registrarse");
+
+            btnRegistrarse.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                var nombreProducto = document.getElementById("validationTooltip01").value.trim();
+                var codigoProducto = document.getElementById("validationTooltip02").value.trim();
+                var descripcion = document.getElementById("validationTooltip03").value.trim();
+                var precio = document.getElementById("validationTooltip04").value.trim();
+                var categoria = document.getElementById("validationTooltip05").value;
+
+                if (nombreProducto === "" || codigoProducto === "" || descripcion === "" || precio === "" || categoria === "") {
+                    alert("Por favor completa todos los campos.");
+                } else {
+                    // Mostrar mensaje de ingreso exitoso
+                    var mensaje = document.createElement("p");
+                    mensaje.textContent = "Ingreso exitoso";
+                    mensaje.style.color = "green";
+                    mensaje.style.fontWeight = "bold";
+
+                    var contenedorMensaje = document.getElementById("titulo");
+                    contenedorMensaje.appendChild(mensaje);
+
+                    // Limpiar los campos después del mensaje
+                    document.getElementById("validationTooltip01").value = "";
+                    document.getElementById("validationTooltip02").value = "";
+                    document.getElementById("validationTooltip03").value = "";
+                    document.getElementById("validationTooltip04").value = "";
+                    document.getElementById("validationTooltip05").value = "";
+
+                    // Desvanecer el mensaje lentamente
+                    setTimeout(function() {
+                        mensaje.style.opacity = "0";
+                        setTimeout(function() {
+                            contenedorMensaje.removeChild(mensaje);
+                        }, 1000); // Después de 1 segundo, eliminar el mensaje
+                    }, 2000); // Después de 2 segundos, iniciar el desvanecimiento
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

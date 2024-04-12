@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <script src="../js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" >
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="contenedor">
+             <h1>REGISTRATE</h1>
+             <div class="text-center">
+                <img src="./img/5.png" class="rounded" alt="corazon" width="200" height="200">
+             </div>
+             <div class="invitado">
+              <button type="button" class="btn btn-primary">
+                <a href="./ventas.html">ENTRAR COMO INVITADO</a></button>
+             </div>
+             <div class="container mt-5">
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4 position-relative">
+                      <label for="validationTooltip01" class="form-label">NOMBRE</label>
+                      <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                  </div>
+                  <div class="col-md-4 position-relative">
+                      <label for="validationTooltip02" class="form-label">APELLIDO</label>
+                      <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                      
+                  </div>
+                  <div class="col-md-4 position-relative">
+                      <label for="validationTooltipUsername" class="form-label">CORREO</label>
+                      <div class="input-group has-validation">
+                          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                          <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                      </div>
+                  </div>
+                  <div class="col-md-6 position-relative">
+                      <label for="validationTooltip03" class="form-label">DIRECCION</label>
+                      <input type="text" class="form-control" id="validationTooltip03" required>
+                  </div>
+                  <div class="col-md-3 position-relative">
+                      <label for="validationTooltip04" class="form-label">ESTADO CIVIL</label>
+                      <select class="form-select" id="validationTooltip04" required>
+                          <option selected disabled value="">ELEGIR...</option>
+                          <option>SOLTERO</option>
+                          <option>CASADO</option>
+                      </select>
+                    
+                  </div>
+                  <div class="col-12">
+                    <a href="javascript:void(0);" id="btn-registrarse" class="btn btn-primary">REGISTRARSE</a>
+                </div>
+                <div class="col-12">
+                    <a href="javascript:void(0);" id="btn-iniciar-sesion" class="btn btn-primary">INICIAR SESIÓN</a>
+                </div>                
+              </form>
+          </div>
+          <script>
+            // Cuando el documento está listo
+            document.addEventListener("DOMContentLoaded", function() {
+                // Obtener los botones
+                var btnRegistrarse = document.getElementById("btn-registrarse");
+                var btnIniciarSesion = document.getElementById("btn-iniciar-sesion");
+        
+                // Asignar eventos de clic a los botones
+                btnRegistrarse.addEventListener("click", function(event) {
+                    event.preventDefault(); // Evitar que el enlace haga la redirección inmediata
+        
+                    // Obtener los valores de los campos
+                    var nombre = document.getElementById("validationTooltip01").value.trim();
+                    var apellido = document.getElementById("validationTooltip02").value.trim();
+                    var correo = document.getElementById("validationTooltipUsername").value.trim();
+                    var direccion = document.getElementById("validationTooltip03").value.trim();
+                    var estadoCivil = document.getElementById("validationTooltip04").value;
+        
+                    // Validar los campos
+                    if (nombre === "" || apellido === "" || correo === "" || direccion === "" || estadoCivil === "") {
+                        alert("Por favor completa todos los campos.");
+                    } else {
+                        // Todos los campos están completos, redirige a la URL correspondiente
+                        window.location.href = './ventas.html'; // Cambia la URL según sea necesario
+                    }
+                });
+        
+                btnIniciarSesion.addEventListener("click", function(event) {
+                    event.preventDefault();
+        
+                    // Aquí puedes colocar la lógica de inicio de sesión sin validar campos
+                    console.log("Iniciando sesión sin validar campos");
+                    window.location.href = '../index.html'; // Redirige a la página de inicio de sesión
+                });
+            });
+            
+        </script>
+        
+        </div>
+    </body>
+</html>

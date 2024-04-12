@@ -1,0 +1,72 @@
+.contenedor {
+  position: relative; /* Asegura que el contenido sea relativo al div */
+  width: 100%; /* Ancho del div */
+  height: 640px; /* Altura del div */
+  background-image: url(./img/fondo.jpg);
+  background-size: cover; /* Cubre todo el div con la imagen */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+#titulo {
+  color: rgba(26, 48, 90, 0.616); /* Color del texto */
+  font-size: 40px; /* Tamaño de la fuente */
+  text-align: center; /* Centrar el texto */
+  padding: 20px; /* Espaciado interior */
+  background-color: #d4ddcab2; /* Color de fondo */
+  border-radius: 10px; /* Borde redondeado */
+  margin: 20px auto; /* Margen superior e inferior automático para centrar verticalmente */
+}
+
+.cuadro {
+  background-color: rgba(179, 229, 252, 0.7); /* Color celeste con transparencia */
+  color: #000; /* Color del texto (negro) */
+  font-family: Arial, sans-serif; /* Fuente simple */
+  font-weight: normal; /* Texto en peso normal (no negrita) */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Borde redondeado */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 400px; /* Ancho máximo del cuadro */
+  text-align: center; /* Texto centrado */
+}
+.invitado {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.842);
+  font-size: 16px;
+}
+h5{
+  color: rgba(0, 0, 0, 0.842);
+  font-size: 20px;
+}
+a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.custom-margin {
+  margin-right: 30px;
+}
+
+.transparent-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo transparente (negro al 50%) */
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+.transparent-container2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0); /* Color de fondo transparente (negro al 50%) */
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+}

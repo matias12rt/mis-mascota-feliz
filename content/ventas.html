@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="titulo">
+            <h1>VENTAS DE PRODUCTOS</h1>
+        </div>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">Buscar producto</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="escribe..." aria-label="search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+        <div class="invitado">
+            <button type="button" class="btn btn-primary">
+                <a href="../index.html">Cerrar sesion o volver</a></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/producto1.jpg" class="card-img-top" alt="producto" width="300" height="300">
+                        <div class="card-body">
+                            <h5 class="card-title">TRAPER SHAMPOO NEUTRO PARA CACHORROS 260ML</h5>
+                            <p class="card-text">Descripción
+                                Ha sido desarrollado con suaves ingredientes para limpiar y proteger la delicada piel de tu cachorro. Su exclusiva fórmula deja el pelaje limpio por más tiempo y con un agradable aroma a manzana fresca.
+                                
+                                Beneficios
+                                
+                                Elimina las partículas de suciedad sin dañar la piel, ya que el nivel de espuma que generan es moderado y se elimina fácilmente, por lo que no reseca ni irrita la piel.
+                            </p>
+                            <a href="#" class="btn btn-primary comprar-btn">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/producto2.png" class="card-img-top" alt="producto" width="300" height="300">
+                        <div class="card-body">
+                            <h5 class="card-title">NATURES MIRACLE SHAMPOO OATMEAL CONTROL DE OLOR 473ML</h5>
+                            <p class="card-text">Descripción
+                                Cuando los olores fuertes de los perros comienzan a arrugar tu nariz, ¡es hora de usar el champú de avena Nature's Miracle ™! 
+                                
+                                Masajea suavemente de la cabeza a la cola, evitando los ojos.  Cepille la capa para quitar los enredos y seque bien con una toalla. Las áreas enmarañadas y enredadas pueden requerir atención especial. Úselo solo para perros.
+                            </p>
+                            <a href="#" class="btn btn-primary comprar-btn">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-success d-none" role="alert" id="alerta">
+                    <h4 class="alert-heading">COMPRA EXITOSA</h4>
+                    <a href="./ventas.html" class="btn btn-primary">ACEPTAR</a>
+                </div>
+            </div>
+        </div>
+        <div class="transparent-container">
+            <a href="./ingresopro.html" class="btn btn-primary">INGRESAR PRODUCTOS</a>
+        </div>
+    </div>
+    <script>
+        // Utilizamos jQuery que ya está incluido en tu proyecto
+        $(document).ready(function() {
+            $('.comprar-btn').click(function(e) {
+                e.preventDefault(); // Evita que el enlace recargue la página
+                $('#alerta').removeClass('d-none').fadeIn().delay(2000).fadeOut(); // Mostrar la alerta y luego ocultarla después de 2 segundos
+            });
+        });
+    </script>
+</body>
+</html>
+
