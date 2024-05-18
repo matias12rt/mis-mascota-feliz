@@ -45,6 +45,15 @@ p{
   font-weight: 1000;
   text-shadow: 0.5px 0.5px 0 #073f94, -0.5px -0.5px 0 #15178b;
 }
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
 h5{
   color: rgba(0, 0, 0, 0.842);
   font-size: 20px;
