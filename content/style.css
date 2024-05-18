@@ -43,6 +43,7 @@ p{
   font-family: 'EB Garamond', serif;
   font-weight: bold;
   font-weight: 800;
+  text-shadow: 0.5px 0.5px 0 #333333, -0.5px -0.5px 0 #333333;
 }
 h5{
   color: rgba(0, 0, 0, 0.842);
