@@ -7,6 +7,15 @@
   background-position: center; /* Centra la imagen de fondo */
 }
 
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+}
+
 #titulo {
   color: rgba(26, 48, 90, 0.616); /* Color del texto */
   font-size: 40px; /* Tamaño de la fuente */
