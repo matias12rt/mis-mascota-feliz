@@ -20,69 +20,50 @@
                      y haz que cada día sea especial para tus amigos de cuatro patas
                 </p>
             </div>
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title text-center">Iniciar Sesión</h3>
-                                <form id="loginForm">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Correo Electrónico</label>
-                                        <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
-                                    </div>
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-primary" id="loginButton" disabled>
-                                            <a href="./content/ventas.html">Inicio Sesión</a>
-                                        </button>
-                                        
-                                        <button type="button" class="btn btn-primary btn-lg">
-                                            <a href="./content/registro.html">REGISTRARSE</a>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </nav>
             
-            <script>
-                // Espera a que el DOM esté completamente cargado
-                document.addEventListener("DOMContentLoaded", function () {
-                    // Obtener los elementos del formulario y del botón de inicio de sesión
-                    const form = document.getElementById("loginForm");
-                    const emailInput = document.getElementById("email");
-                    const passwordInput = document.getElementById("password");
-                    const loginButton = document.getElementById("loginButton");
-            
-                    // Función para verificar si los campos están rellenados
-                    function checkFields() {
-                        const emailValue = emailInput.value.trim();
-                        const passwordValue = passwordInput.value.trim();
-            
-                        // Habilitar el botón si ambos campos tienen contenido, de lo contrario, deshabilitarlo
-                        if (emailValue !== "" && passwordValue !== "") {
-                            loginButton.disabled = false;
-                        } else {
-                            loginButton.disabled = true;
-                        }
-                    }
-            
-                    // Escuchar eventos de entrada en los campos de correo electrónico y contraseña
-                    emailInput.addEventListener("input", checkFields);
-                    passwordInput.addEventListener("input", checkFields);
-            
-                    // Verificar los campos al cargar la página
-                    checkFields();
-                });
-            </script>
-            
-            <div class="transparent-container">
+           
+           
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -121,7 +102,6 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-            </div>
             <div class="invitado">
                 <button type="button" class="btn btn-primary">
                     <a href="./content/ventas.html">ENTRAR COMO INVITADO</a></button>
