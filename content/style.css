@@ -38,12 +38,12 @@
 }
 
 p{
-  color:  #333333;
+  color:  #721a1a;
   font-size: 16px;
   font-family: 'EB Garamond', serif;
   font-weight: bold;
   font-weight: 800;
-  text-shadow: 0.5px 0.5px 0 #333333, -0.5px -0.5px 0 #333333;
+  text-shadow: 0.5px 0.5px 0 #701515, -0.5px -0.5px 0 #791c1c;
 }
 h5{
   color: rgba(0, 0, 0, 0.842);
