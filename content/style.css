@@ -37,12 +37,11 @@
 }
 
 p{
-  color:  #053eb8;
-  font-size: 16px;
+  color:  #000000ea;
+  font-size: 30px;
   font-family: 'EB Garamond', serif;
   font-weight: bold;
-  font-weight: 1000;
-  text-shadow: 0.5px 0.5px 0 #073f94, -0.5px -0.5px 0 #15178b;
+  font-weight: 2000;
 }
 /*--------------*/
 .login-container {
@@ -51,7 +50,7 @@ p{
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: center;
+  position:center;
 
 }
 .login-icon {
