@@ -60,6 +60,11 @@ p{
   }
 }
 
+.card {
+  background-color: transparent; /* Eliminar fondo blanco */
+  border: none; /* Opcional: eliminar borde */
+}
+
 h5{
   color: rgba(0, 0, 0, 0.842);
   font-size: 20px;
