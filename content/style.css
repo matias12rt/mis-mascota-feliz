@@ -79,27 +79,9 @@
 }
 
 
-#titulo {
-  color: rgba(26, 48, 90, 0.616); /* Color del texto */
-  font-size: 40px; /* Tamaño de la fuente */
-  text-align: center; /* Centrar el texto */
-  padding: 20px; /* Espaciado interior */
-  background-color: #d4ddcab2; /* Color de fondo */
-  border-radius: 10px; /* Borde redondeado */
-  margin: 20px auto; /* Margen superior e inferior automático para centrar verticalmente */
-}
 
-.cuadro {
-  background-color: rgba(179, 229, 252, 0.7); /* Color celeste con transparencia */
-  color: #000; /* Color del texto (negro) */
-  font-family: Arial, sans-serif; /* Fuente simple */
-  font-weight: normal; /* Texto en peso normal (no negrita) */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 10px; /* Borde redondeado */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  max-width: 400px; /* Ancho máximo del cuadro */
-  text-align: center; /* Texto centrado */
-}
+
+
 .invitado {
   position: fixed;
   top: 10px;
