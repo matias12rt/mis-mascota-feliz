@@ -6,109 +6,167 @@
         <title>Mi mascota feliz</title>
         <link rel="stylesheet" href="./css/bootstrap.min.css" >
         <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/color-modes.js"></script>
         <link rel="stylesheet" href="./content/style.css">
     </head>
     <body>
-        <div class="contenedor">
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi mascota feliz</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/color-modes.js"></script>
+    <link rel="stylesheet" href="./content/style.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+</head>
+<body>
+    <div class="contenedor">
 
-            <!--barrrr-->
-            
-            <nav class="navbar navbar-dark bg-dark fixed-top">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="./index.html">MI MASCOTA FELIZ</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU PRINCIPAL</h5>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="./content/registro.html">REGISTRASE</a>
-                        </li>
+        <!--barrrr-->
+        
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">MI MASCOTA FELIZ</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU PRINCIPAL</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./content/registro.html">REGISTRASE</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="./content/ventas.html">ENTRAR COMO INVITADO</a>
+                      </li>
+                    <li class="nav-item dropdown">
                          <li class="nav-item">
-                            <a class="nav-link" href="./content/ventas.html">ENTRAR COMO INVITADO</a>
-                          </li>
-                        <li class="nav-item dropdown">
-                             <li class="nav-item">
-                            <a class="nav-link" href="./content/veterinarios.html">VER ESPECIALISTAS</a>
-                         </li>
-                         <div class="login-container">
-                            <div class="login-icon">
-                                <img src="./content/img/login.jpg" alt="Gato">
-                            </div>
-                            <form>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Contraseña</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block">INICIAR</button>
-                                <div class="text-center mt-3">
-                                    <a href="#" class="text-white">¿Olvidaste tu contraseña?</a>
-                                </div>
-                            </form>
+                        <a class="nav-link" href="./content/veterinarios.html">VER ESPECIALISTAS</a>
+                     </li>
+                     <div class="login-container">
+                        <div class="login-icon">
+                            <img src="./content/img/login.jpg" alt="Gato">
                         </div>
-                      </ul> 
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">INICIAR</button>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-white">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </form>
                     </div>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+            <header class="container-fluid bg-primary d-flex justify-content-center" id="titu">
+                <p class="text-light mb-0 p-2 fs-6">BIENVENIDO A MI MASCOTA FELIZ</p>
+              </header>
+          </nav>
+          <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
                   </div>
                 </div>
-                <header class="container-fluid bg-primary d-flex justify-content-center" id="titu">
-                    <p class="text-light mb-0 p-2 fs-6">BIENVENIDO A MI MASCOTA FELIZ</p>
-                  </header>
-              </nav>
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" >
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="./content/img/2.jpg" class="d-block w-100" alt="mascotas" width="300" height="400" >
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>LAS MASCOTAS SON AMOR</h5>
-                          <p>Son nuestra familia y complemento.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./content/img/3.jfif" class="d-block w-100" alt="mascota" width="300" height="400">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>POR ESO EN MASCOTA FELIZ</h5>
-                          <p>Nos preocupamos por tu mascota</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./content/img/4.png" class="d-block w-100" alt="mascota" width="300" height="400">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>TE DAMOS LA MEJOR CALIDAD</h5>
-                          <p>En productos o necesidades basicas</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
                   </div>
-                  
-            <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"  id="intro">
-            <h1>EN MACOSTA FELIZ</h1>
-                <p>Descubre nuestra selección de productos para tus compañeros peludos.
-                     Desde alimentos nutritivos hasta juguetes divertidos, tenemos todo lo que necesitas 
-                     para mantener a tus mascotas felices y saludables. Explora nuestras ofertas 
-                     y haz que cada día sea especial para tus amigos de cuatro patas
-                </p>
-            </section>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
+              
+        <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"  id="intro">
+        <h1>EN MACOSTA FELIZ</h1>
+            <p>Descubre nuestra selección de productos para tus compañeros peludos.
+                 Desde alimentos nutritivos hasta juguetes divertidos, tenemos todo lo que necesitas 
+                 para mantener a tus mascotas felices y saludables. Explora nuestras ofertas 
+                 y haz que cada día sea especial para tus amigos de cuatro patas
+            </p>
+        </section>
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+              <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <h2 class="fw-normal">Heading</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <h2 class="fw-normal">Heading</h2>
+                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <h2 class="fw-normal">Heading</h2>
+                <p>And lastly this, the third column of representative placeholder content.</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
                 
-        </div>
+          </div>
+            
+    </div>
+</body>
+</html>
+
     </body>
 </html>
