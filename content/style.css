@@ -46,7 +46,13 @@ p{
   text-shadow: 0.5px 0.5px 0 #073f94, -0.5px -0.5px 0 #15178b;
 }
 /*--------------*/
-
+.login-container {
+  background-color: #343a40;
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .login-icon {
   display: flex;
   justify-content: center;
