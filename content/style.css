@@ -1,63 +1,6 @@
-.contenedor {
-  position: relative; /* Asegura que el contenido sea relativo al div */
-  width: 100%; /* Ancho del div */
-  height: 640px; /* Altura del div */
-
-  background-size: cover; /* Cubre todo el div con la imagen */
-  background-position: center; /* Centra la imagen de fondo */
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
 }
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-/* rtl:end:ignore */
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-/* rtl:begin:remove */
-.featurette-heading {
-  letter-spacing: -.05rem;
-}
-
-/* rtl:end:remove */
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
 
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
@@ -78,9 +21,79 @@
   }
 }
 
+.login-container {
+  background-color: #343a40;
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position:center;
+
+}
+.login-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.login-icon img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.form-control {
+  background-color: #495057;
+  color: white;
+  border-radius: 5px;
+}
 
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.form-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+}
+.form-image {
+  flex: 1;
+  background: url('./img/qqq.jpg') no-repeat center center;
+  background-size: cover;
+}
+.form-content {
+  flex: 1;
+  padding: 30px;
+}
+.needs-validation .form-control:invalid {
+  border-color: #dc3545;
+}
+.needs-validation .form-control:valid {
+  border-color: #28a745;
+}
 
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+  }
+}
 
 .invitado {
   position: fixed;
