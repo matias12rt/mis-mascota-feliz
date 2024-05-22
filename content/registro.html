@@ -60,21 +60,21 @@
                             </div>
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                                <input type="text" class="form-control" id="nombre" pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" placeholder="Nombre" required>
                                 <div class="invalid-feedback">
                                     Por favor ingresa tu nombre.
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
-                                <div class="invalid-feedback">
-                                    Por favor ingresa tu apellido.
-                                </div>
-                            </div>
+                              <label for="apellido" class="form-label">Apellido</label>
+                              <input type="text" class="form-control" pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" id="apellido" placeholder="Apellido" required >
+                              <div class="invalid-feedback">
+                                  Por favor ingresa tu apellido no pueden ser numeros.
+                              </div>
+                          </div>
                             <div class="mb-3">
                                 <label for="direccion" class="form-label">Dirección</label>
-                                <input type="text" class="form-control" id="direccion" placeholder="Dirección" required>
+                                <input type="text" class="form-control" id="direccion" minlength="6" placeholder="Dirección" required>
                                 <div class="invalid-feedback">
                                     Por favor ingresa tu dirección.
                                 </div>

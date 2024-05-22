@@ -1,101 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto a vender</title>
-    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>ingreso productos</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" >
     <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 </head>
 <body>
-    <div class="contenedor">
-        <div id="titulo">
-            <h1>INGRESO DE PRODUCTO</h1>
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">MI MASCOTA FELIZ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU PRINCIPAL</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link "  href="../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                  <a  class="nav-link " href="./registro.html">REGISTRASE</a>
+                </li>
+                <li class="nav-item dropdown">
+                     <li class="nav-item">
+                    <a class="nav-link" href="./veterinarios.html">VER ESPECIALISTAS</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="./content/ingresopro.html ">INGRESAR PRODUCTO</a>
+                  </li>
+              </ul> 
+            </div>
+          </div>
         </div>
-        <div class="invitado">
-            <button type="button" class="btn btn-primary">
-                <a href="../index.html">Cerrar sesion</a>
-            </button>
-        </div>
-        <div class="container mt-5">
-            <form class="row g-3 needs-validation" novalidate>
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip01" class="form-label"><h5>NOMBRE PRODUCTO:</h5></label>
-                    <input type="text" class="form-control" id="validationTooltip01" value="" required>
-                </div>
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip02" class="form-label"><h5>CODIGO PRO:</h5></label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                </div>
-                <div class="col-md-4 position-relative">
-                    <label for="validationTooltip03" class="form-label"><h5>DESCRIPCION:</h5></label>
-                    <input type="text" class="form-control" id="validationTooltip03" value="" required>
-                </div>
-                <div class="col-md-6 position-relative">
-                    <label for="validationTooltip04" class="form-label"><h5>PRECIO:</h5></label>
-                    <input type="text" class="form-control" id="validationTooltip04" value="" required>
-                </div>
-                <div class="col-md-3 position-relative">
-                    <label for="validationTooltip05" class="form-label"><h5>CATEGORIA:</h5></label>
-                    <select class="form-select" id="validationTooltip05" required>
-                        <option selected disabled value="">ELEGIR...</option>
-                        <option>COMIDA</option>
-                        <option>LIMPIESA</option>
+        <header class="container-fluid bg-primary d-flex justify-content-center" id="titu">
+            <MI class="text-light mb-0 p-2 fs-6">REGISTRATE EN MI MASCOTA FELIZ</p>
+          </header>
+      </nav>
+      <div class="container form-container">
+        <div class="form-box">
+            <div class="form-producto"></div>
+            <div class="form-content">
+                <h2 class="text-center mb-4"></h2>
+                <form class="needs-validation" name="registro" novalidate>
+                    <div class="mb-3">
+                        <label for="product_code" class="form-label">Código de Producto de Mascota</label>
+                        <input type="text" class="form-control" id="product_code" placeholder="Ingrese el código del producto de mascota" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa un código de producto válido.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="producto" class="form-label">Nombre producto</label>
+                        <input type="text" class="form-control" id="producto" placeholder="Nombre producto" minlength="3" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa el nombre del producto.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcion" placeholder="Descripcion" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa una descripcion.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product_value" class="form-label">Valor del Producto</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="product_value" placeholder="Ingrese el valor del producto" required min="100">
+                        </div>
+                        <div class="invalid-feedback">
+                            El valor mínimo del producto debe ser de 100 pesos.
+                        </div>
+                    </div>
+                  <div class="mb-3">
+                    <h5>CATEGORIA</h5>
+                    <select name="sexo" required >
+                      <option value="1">Alimentos</option>
+                      <option value="2">Limpiesa</option>
+                      <option value="3">Juguetes</option>
+                      <option value="4">Ropa</option>
                     </select>
-                </div>
-                <div class="col-12">
-                    <a href="javascript:void(0);" id="btn-registrarse" class="btn btn-primary">INGRESAR</a>
-                </div>
-                <div class="col-12">
-                    <a href="./ventas.html" id="btn-iniciar-sesion" class="btn btn-primary">VOLVER A TIENDA</a>
-                </div>                
-            </form>
+                  </div>
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                </form>
+            </div>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var btnRegistrarse = document.getElementById("btn-registrarse");
-
-            btnRegistrarse.addEventListener("click", function(event) {
-                event.preventDefault();
-
-                var nombreProducto = document.getElementById("validationTooltip01").value.trim();
-                var codigoProducto = document.getElementById("validationTooltip02").value.trim();
-                var descripcion = document.getElementById("validationTooltip03").value.trim();
-                var precio = document.getElementById("validationTooltip04").value.trim();
-                var categoria = document.getElementById("validationTooltip05").value;
-
-                if (nombreProducto === "" || codigoProducto === "" || descripcion === "" || precio === "" || categoria === "") {
-                    alert("Por favor completa todos los campos.");
-                } else {
-                    // Mostrar mensaje de ingreso exitoso
-                    var mensaje = document.createElement("p");
-                    mensaje.textContent = "Ingreso exitoso";
-                    mensaje.style.color = "green";
-                    mensaje.style.fontWeight = "bold";
-
-                    var contenedorMensaje = document.getElementById("titulo");
-                    contenedorMensaje.appendChild(mensaje);
-
-                    // Limpiar los campos después del mensaje
-                    document.getElementById("validationTooltip01").value = "";
-                    document.getElementById("validationTooltip02").value = "";
-                    document.getElementById("validationTooltip03").value = "";
-                    document.getElementById("validationTooltip04").value = "";
-                    document.getElementById("validationTooltip05").value = "";
-
-                    // Desvanecer el mensaje lentamente
-                    setTimeout(function() {
-                        mensaje.style.opacity = "0";
-                        setTimeout(function() {
-                            contenedorMensaje.removeChild(mensaje);
-                        }, 1000); // Después de 1 segundo, eliminar el mensaje
-                    }, 2000); // Después de 2 segundos, iniciar el desvanecimiento
-                }
-            });
-        });
-    </script>
 </body>
-</html>
+<script>
+    (function () {
+        'use strict'
 
+        var forms = document.querySelectorAll('.needs-validation')
+
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+</html>

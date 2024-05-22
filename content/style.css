@@ -69,6 +69,7 @@
   background: url('./img/qqq.jpg') no-repeat center center;
   background-size: cover;
 }
+
 .form-content {
   flex: 1;
   padding: 30px;
@@ -80,7 +81,11 @@
   border-color: #28a745;
 }
 
-
+.form-producto {
+  flex: 1;
+  background: url('./img/producto\ para\ animales.jpg') no-repeat center center;
+  background-size: cover;
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -94,12 +99,39 @@
       font-size: 3.5rem;
   }
 }
-
-.invitado {
+#carritoFlotante {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background: url('./img/carrito.png') no-repeat center center;
+  background-size: contain;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+#carritoContenido {
+  position: fixed;
+  bottom: 0;
+  right: 140px; /* Ajuste el espacio entre el carrito y la imagen del producto */
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+  z-index: 9998; /* Asegurar que el contenido esté detrás del carrito */
+}
+
+#carritoContenido img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
 }
 
 p{
@@ -115,25 +147,3 @@ a{
   text-decoration: none;
 }
 
-.custom-margin {
-  margin-right: 30px;
-}
-
-.transparent-container {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo transparente (negro al 50%) */
-    color: white;
-    padding: 20px;
-    font-size: 20px;
-}
-.transparent-container2 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0); /* Color de fondo transparente (negro al 50%) */
-  color: white;
-  padding: 20px;
-  font-size: 20px;
-}
