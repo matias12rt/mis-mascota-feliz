@@ -42,14 +42,14 @@
           </div>
         </div>
         <header class="container-fluid bg-primary d-flex justify-content-center" id="titu">
-            <MI class="text-light mb-0 p-2 fs-6">REGISTRATE EN MI MASCOTA FELIZ</p>
+            <p class="text-light mb-0 p-2 fs-6">REGISTRATE EN MI MASCOTA FELIZ</p>
           </header>
       </nav>
       <div class="container form-container">
         <div class="form-box">
             <div class="form-producto"></div>
             <div class="form-content">
-                <h2 class="text-center mb-4"></h2>
+                <h2 class="text-center mb-4">Ingreso de Producto</h2>
                 <form class="needs-validation" name="registro" novalidate>
                     <div class="mb-3">
                         <label for="product_code" class="form-label">Código de Producto de Mascota</label>
@@ -82,38 +82,61 @@
                             El valor mínimo del producto debe ser de 100 pesos.
                         </div>
                     </div>
-                  <div class="mb-3">
-                    <h5>CATEGORIA</h5>
-                    <select name="sexo" required >
-                      <option value="1">Alimentos</option>
-                      <option value="2">Limpiesa</option>
-                      <option value="3">Juguetes</option>
-                      <option value="4">Ropa</option>
-                    </select>
-                  </div>
-                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                    <div class="mb-3">
+                        <h5>CATEGORIA</h5>
+                        <select name="categoria" class="form-control" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option value="1">Alimentos</option>
+                            <option value="2">Limpieza</option>
+                            <option value="3">Juguetes</option>
+                            <option value="4">Ropa</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor selecciona una categoría.
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Registrar Producto</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroLabel">Registro exitoso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El producto ha sido registrado exitosamente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
 </body>
 <script>
-    (function () {
-        'use strict'
-
-        var forms = document.querySelectorAll('.needs-validation')
-
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
+     (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            event.preventDefault(); // Evita el envío del formulario
+                            $('#registro').modal('show'); // Muestra el modal
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
 </script>
 </html>
